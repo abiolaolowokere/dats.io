@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Fuel Executive Dashboard</title>
+	<link rel="stylesheet" type="text/css" href="fuel.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<h1> Welcome to the Information Intelligence <br>Executive Fuel Dashboard Landing Page!</h1>
+	<a href="../dats.html" class="homepage">&laquo; Dats Home Page</a>
+</head>
+<body>
+	<div id="title" class="Objective">
+		<h2>Project Objective</h2>
+		<p class="Objective">
+			<li>The Fuel Readiness Dashboard will visualize fuel data across the Navy Fleet, with fuel supply, demands, and shortages filterable by ship, TYCOM, and Combatant Commands<br><br></li>
+            <li>Capability similar to the COVID-19 PPE Dashboard and can be used by other DON Commands/Organizations to help determine Fleet Readiness and/or determine fuel supply status<br><br></li>
+            <li>Dashboard will provide a unit-level report of fuel levels married to DLA Shore Fuel availability<br><br></li>
+            <li>Data Engineering will result in a pipeline and data model of DLA and Fuel Messaging data in Jupiter that will be available for DON<br></li>
+            <span>- OPREP-5 Fuel Messaging data from JMHS or other sources<br></span>
+			<span>- Raw Fuel Messaging data parsed to extract key required data elements</span>
+			<img src="images/SCT.jpg" class="center"><br>
+
+		</p>
+	</div>
+	<div id="title" class="schedule">
+		<h2>Project Schedule </h2>
+		<img src="images/schedule.jpg" class="center"><br>
+	</div>
+	<div id="title" class="Accomplishments">
+		<h2>Accomplishments</h2>
+		<p>
+		<li>Identified primary data sources and pipeline ingest requirements for on hand fuel data (OPREP 5 via C20IX) and ashore fuel data sources (DLA EBS/FMD)<br></li>
+            <li>Identified ongoing efforts to reduce redevelopment work<br></li>
+            <span>- Utilizes the OPREP 5 parser developed by C2X lab<br></span>
+            <span>- Consumes OPREP 5 messages from the Hermes centralized messaging effort<br></span>
+            <li>Iteratively developed Jupiter use case documentation (submitted 29 Jan 2022; approved 29 Mar 2022)<br></li>
+            <li>Built a network of fuel SMEs from DLA, Jupiter, Carderock, etc.<br></li>
+            <li>Received, hosted, and analyzed initial draft of C2X OPREP 5 Fuel Parser<br></li>
+            <li>Select team members with SIPR access have analyzed OPREP 5 messages<br></li>
+            <li>Conducted 5 Constellation Events to define project scope and success criteria<br></li>
+            <li>Produced and iteratively updated data flow / CONOPS diagrams</li>
+            <li>Produced Work Breakdown Structure of Data Engineering and Data Analytics Initiatives and Epics, and initial backlog of tasks<br>
+            <li>Implemented dedicated JIRA project to facilitate project engineering and development via agile scrum methodology (Sprints)<br></li>
+            <li>Integrated Spencer Wilder into the Hermes team, with access to the Hermes NIPR clusters and code base<br>
+            Received a data dictionary detailing Hermes output<br></li>
+
+
+
+		</p>
+	</div>
+	<div id="title" class="Immediate">
+		<h2>Immediate Next Steps</h2>
+		<p>
+			<li>Implement a declassified C2X parser in an existing NIPR development Jupiter environment using simulated data<br>
+            <li>Start dashboard mockups<br>
+            <li>Work with Jupiter team to establish the Fuel Readiness Dashboard architecture in Jupiter (NIPR and SIPR)<br>
+            <li>Work with product owner/SMEs to further define key metrics: Days of Supply, DoS Status, Percent capacity<br>
+            <li>Establish pipeline mockup to simulate ingesting message traffic from the Hermes effort (NIPR)<br>
+            <li>Data Engineering to design, develop, and deliver data entity model<br>
+            <li>Data Engineering to develop and automate the transforms to Silver and Gold data sets required to support Fuel Readiness Dashboard requirements*<br>
+
+		</p>
+	</div>
+	<div id="title" class="nextsteps">
+		<h2>Next Steps</h2>
+		<p>
+			<li>Finish dashboard mockups<br></li>
+            <li>Gain product owner concurrence on dashboard mockups<br></li>
+            <li>Begin visualization development<br></li>
+            <li>Begin implementing C2X parser in Jupiter SIPR environment<br></li>
+            <li>Identify authoritative source of Ship Master Data, Fuel Facilities Master Data<br></li>
+            <li>Work with Advana/Jupiter team to design a pipeline to ingest DLA data from Advana<br></li>
+            <li>Build and ensure team access to the Fuel Dashboard architecture in Jupiter <br></li>
+
+		</p>
+	</div>
+	<div>
+		<h2>Risks & Mitigations</h2>
+		<p>
+			<li>Accuracy of OPREP5 Messages</li>
+            <span>- Mitigation: Provide end user capability to read messages; Provide statistics on accuracy of messages  </span>
+            <li>C2X Parser Implementation and Declassification</li>
+            <span>- Mitigation: Collaborate closely with C2X authors; allow enough time for declassification of code on high side and plan to have scheduled drops in order to dial in process </span>
+            <li>Accuracy of C2X Parser</li>
+            <span>- Mitigation: Test driven development </span>
+            <li>Timeline for Hermes Implementation in Jupiter </li>
+            <span>- Mitigation: Get representative data to feed development  </span>
+            <li>SIPR Jupiter Architecture Buildout</li>
+            <span>- Mitigation: Continue to work on low side to understand requirements; use Case approved, continue working with Jupiter  </span>
+
+		</p>
+	</div>
+<p><center>&copy PEO MLB Data Transformation Services </center></p>
+</body>
+</html>
