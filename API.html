@@ -7,7 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="api.css">
 	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
 	<h1> Welcome to Data Services <br>Application Programmable Interface landing Page!!</h1>
-	<a href="../dats.html" class="homepage">&laquo; Dats Home Page</a>
+	<a href="dats.html" class="homepage">&laquo; Dats Home Page</a>
 
 	</head>
 <body>
@@ -38,7 +38,7 @@
 			<h2>Objective Architecture<br></h2>
 			<p>
 				Below is the PEO MLB DaTS Objective Architecture, provided by Georgia Tech Research Institute (GTRI) and the DaTS Architecture team. The DaTS Common API Framework will be a key component of the Data Environment and initially comprise of the four services of Discovery, Subscription, Ingestion, and Dissemination.<br><br>
-				<img src="images/ObjectiveArchitecture.jpg" class="center"><br>
+				<img src="ObjectiveArchitecture.jpg" class="center"><br>
 			</p>
 			<p class="center">PEO MLB DaTS Objective Architecture<br><br></p>
 			<div id = "technologystack" class="technologystack">
@@ -57,7 +57,7 @@
 					</p>
 
 					<br><p5>These services will be implemented using AWS GovCloud within NIWC Pacific’s Naval Research and Development Environment (NR&DE) IL4 brokerage. They will be implemented using the following AWS services: API Gateway, Lambdas, Relational Database Service (PostgreSQL), Elastic Container Services (ECS), Code Commit, Code Deploy, AWS OpenSearch and S3.</p5><br><br>
-					<img src="images/detailawsarchitecture.jpg" class="center"><br>
+					<img src="detailawsarchitecture.jpg" class="center"><br>
 					<p ><center><strong>Architecture using AWS Services</strong></center></p><br>
 
 					</div2>
@@ -156,7 +156,7 @@
 				Werner Vogels, the CTO of Amazon, once said “Dance like nobody is watching. Encrypt like everyone is” in order to emphasize the importance of having strong security standards for the protection of sensitive data; Identity and Access Management (IDAM) practices will be utilized along with Zero Trust Architecture (ZTA) to enforce data protection.<br><br>
 				When a new user or data source (API or non-API) provider wishes to use the DaTS Common API, they first need to go through an onboarding process. This process has not yet been smoothed out by the team, so today it would just be brokering a person-to-person relationship with the data provider and onboarding their as fit. That ZTA feature for data providers would need to be agreed upon by the Navy and would likely need to have all of them put infrastructure in place for true ZTA to work throughout the whole system. Only DaTS Common API users could be guaranteed a ZTA relationship. API and Non-API providers will still have strict shared trust and DaTS Common API RBAC controls once onboarded and would then be able to utilize the DaTS Common API RBAC controls to limit DaTS Common API user access to their data as desired.<br> <br>Once all stakeholders are onboarded, the API Users would authenticate to data providers via a DaTS Backend Service.
 				<br>
-				<img src="images/userauth.jpg" class="center">
+				<img src="userauth.jpg" class="center">
 				<p><center><strong>API User Authentication</strong></center></p>
 				<p>
 					The security infrastructure is built using a combination of Keycloak and Lambda Authorizers hosted on the API Gateway in order to enforce role based access control (RBAC) and zero trust protocols. These measures are in place to ensure that regardless of how many eyes might land on the DaTS Common API, a strong security infrastructure will be in place to protect users and data.
@@ -291,7 +291,7 @@
 			<p>
 				If a user performs a search query that yields interesting results, they can subscribe to that query. Once subscribed, the user will be notified each time the results of that query are updated.
 			</p>
-			<img src="images/subscriptionarch.jpg" class="center">
+			<img src="subscriptionarch.jpg" class="center">
 			<p><center><strong>Subscription Architecture</strong></center></p>
 			<p>
 				An authenticated user will be able to send a subscription request through API Gateway which will trigger a Lambda function that logs the new subscription in Confluent. From there, Confluent will publish updates to the user as changes to the search query occur. This feature will be enhanced in the future to allow users to subscribe to actual datasets, thus synchronizing their systems with authoritative data sources.
@@ -315,7 +315,7 @@
 					Swagger is used to aid developers in designing, building, and documenting their web APIs. In the Swagger web page, developers can glean knowledge about the details of an API, such as its parameters or responses, and execute a sample request using the API. DaTS will offer a Swagger backend for every onboard API-Provider, as well as the DaTS API Swagger page itself.<br><br>
 					By giving developers an avenue to interact with the APIs through the DaTS Swagger page, developers can gain a thorough understanding of the APIs they are developing against, which will accelerate and enhance the development of their products.<br>
 					</p>
-					<img src="images/swaggerarch.jpg" class="center">
+					<img src="swaggerarch.jpg" class="center">
 					<p><center><strong>Dats Swagger Page</strong></center></p>
 			</div>
 		</div>
@@ -344,7 +344,7 @@
 				<p>
 					CI/CD Pipelines allow for faster and more efficient implementation and shopping of features with Continuous Integration (CI) allowing for new features to seamlessly be integrated with the existing code base and Continuous Deployment (CD) providing a methodology for shipping the aforementioned code base for stakeholder usage.
 				</p>
-				<img src="images/cicd.jpg" class="center">
+				<img src="cicd.jpg" class="center">
 				<p><center><strong>CICD Tools</strong></center></p>
 				<p>The following tools are used to implement our CI/CD Environment:</p>
 				<p class="maintact">
@@ -457,7 +457,7 @@
 		<div>
 			<h2>Example Scenario</h2>
 			<p>Let’s start by setting the stage.</p>
-			<img src="images/eg1.jpg" class="center">
+			<img src="eg1.jpg" class="center">
 			<p><center><strong>Scenario image 1</strong></center></p>
 			<p>
 				All API users and developers would first need to authenticate into the system. Secondly, they will need to be assigned permissions as shown in the above diagram.<br><br>
@@ -465,7 +465,7 @@
 				Let’s assume Tom (a developer) has access to all data sources available on the DaTS Common API and that he doesn’t know where to find the specified Navy data he is interested in. So, he then queries the data he is interested in finding by sending the DaTS API query endpoint “tell me about aircraft engines” a plain language search request which will search across all onboarded DaTS Common API information.
 
 			</p>
-			<img src="images/eg2.jpg" class="center">
+			<img src="eg2.jpg" class="center">
 			<p><center><strong>Scenario image 2</strong></center></p>
 			<p>
 				This will return a list of available systems data which the DaTS common API has combed over before and stored in a knowledge database. What is returned could be one of 3 different information types:
@@ -479,7 +479,7 @@
 			<p>
 				Tom would then have combined list of places to go out and find this information from. Just like a Google search returns a list of places to find information from
 			</p>
-			<img src="images/eg3.jpg" class="center">
+			<img src="eg3.jpg" class="center">
 			<p><center><strong>Scenario Image 3</strong></center></p>
 			<p>
 				There are multiple use cases for the different types of data this can return and unlike a simple Google search, none of the bells and whistles are in a GUI (that the DaTS common API team is developing as part of this project). Accessing each type of data would require a little knowledge about each return type and the permissions that data source opens up to DaTS. There are so many ways to use this API, because this is only a tool used to access the data. Here are a few examples of the types of applications that could be built off this API:
